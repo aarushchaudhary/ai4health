@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        const response = await fetch('/api/admin/login', {
+        // --- Use the full URL for the API endpoint ---
+        const response = await fetch('https://ai4health.netlify.app/api/admin/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
